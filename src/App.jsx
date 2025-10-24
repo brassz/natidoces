@@ -16,6 +16,11 @@ import SignupPage from './pages/SignupPage'
 import PricingPage from './pages/PricingPage'
 import WhatsAppSettingsPage from './pages/WhatsAppSettingsPage'
 import Dashboard from './components/Dashboard'
+// Nati Doces Pages
+import NatiDocesHome from './pages/NatiDocesHome'
+import OrdersPage from './pages/OrdersPage'
+import FinancialSummaryPage from './pages/FinancialSummaryPage'
+import AdminPage from './pages/AdminPage'
 
 function App() {
   return (
@@ -23,7 +28,14 @@ function App() {
       <ThemeProvider>
         <Router>
           <Routes>
-            <Route path="/" element={<LandingPage />} />
+            {/* Nati Doces Routes */}
+            <Route path="/" element={<NatiDocesHome />} />
+            <Route path="/orders" element={<OrdersPage />} />
+            <Route path="/financial" element={<FinancialSummaryPage />} />
+            <Route path="/admin" element={<AdminPage />} />
+            
+            {/* Original Routes */}
+            <Route path="/botflow" element={<LandingPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
             <Route path="/pricing" element={<PricingPage />} />
